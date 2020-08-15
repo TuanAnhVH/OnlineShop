@@ -1,0 +1,82 @@
+﻿@model PagedList.IPagedList<Models.FE.User>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Header{
+    Danh sách tài khoản
+}
+<hr />
+@Html.ActionLink("Thêm mới", "Create", "User")
+
+<div class="card-body">
+    @using (Html.BeginForm(FormMethod.Get))
+    {
+    <div class="row  mb-3">
+        <div class="col-4">
+            <input type="text"  class="form-control" name="SearchString" value="@ViewBag.SearchString" />
+        </div>
+        <div class="col-3">
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </div>
+        
+    </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr class="text-center">
+                    <th>Tài khoản</th>
+                    <th>Tên tài khoản</th>
+                    <th>Email</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr class="text-center">
+                    <th>Tài khoản</th>
+                    <th>Tên tài khoản</th>
+                    <th>Email</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    String status = item.Status == true ? "Active" : "Block";
+                    <tr id="Row_@item.ID" class="text-center">
+                        <td>@item.UserName</td>
+                        <td>@item.Name</td>
+                        <td>@item.Email</td>
+                        <td>@status </td>
+
+                        <td>
+
+                            @*<a href="Edit/@item.ID">Sửa</a>*@
+                            @Html.ActionLink("Sửa", "Edit", "User", new { ID = item.ID }, null)
+                            &ensp;
+                            @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                       {
+                           Confirm = "Bạn có muốn xóa tài khoản này không?",
+                           OnComplete = "$('#Row_" + @item.ID + "').remove()",
+                           HttpMethod = "Delete"
+                       }
+                            )
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page,SearchString= ViewBag.SearchString }))
+
+
+    </div>
+</div>

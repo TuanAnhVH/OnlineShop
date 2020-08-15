@@ -1,0 +1,16 @@
+E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\Models.dll.config
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\Models.dll
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\Models.pdb
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\EntityFramework.dll
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\EntityFramework.xml
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.csproj.CopyComplete
+E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.dll
+E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.pdb
+E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.csprojAssemblyReference.cache
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.dll
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.Mvc.dll
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.xml
+E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.Mvc.xml
