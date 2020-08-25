@@ -31,7 +31,7 @@ namespace Models.FE
 
         public decimal? Price { get; set; }
 
-        public decimal PromotoPrice { get; set; }
+        public decimal? PromotoPrice { get; set; }
 
         public bool? IndudedVAT { get; set; }
 

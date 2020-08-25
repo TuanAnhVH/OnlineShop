@@ -10,7 +10,7 @@ using PagedList;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    public class UserController : BaseController
     {
         // GET: Admin/User
         public ActionResult Index(String SearchString,int Page=1,int PageSize=10)
@@ -48,6 +48,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     long rs = dao.Insert(user);
                     if (rs > 0)
                     {
+                      SetAlert("Thêm user thành công!", "success");
                       return  RedirectToAction("Index");
                     }
                     else if(rs == 0)
@@ -81,6 +82,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     bool rs = dao.Update(user);
                     if (rs)
                     {
+                        SetAlert("Cập nhật thành công!", "success");
                         return RedirectToAction("Index");
                     }
                   
@@ -103,6 +105,16 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             new UserDAO().Delete(ID);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public JsonResult ChangeStatus(long id)
+        {
+            var result = new UserDAO().ChangeStatus(id);
+            return Json(new
+            {
+                status = result
+            });
         }
     }
 }

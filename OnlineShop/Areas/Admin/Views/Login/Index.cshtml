@@ -50,12 +50,12 @@
                                     @using (Html.BeginForm("Login", "Login", FormMethod.Post))
                                     {
                                         <div class="form-group">
-                                            @Html.TextBoxFor(model => model.User, new { @class = "form-control form-control-user", @placeholder = "Nhập tài khoản", @autofocus = "autofocus" })
+                                            @Html.PasswordFor(model => model.User, new { @class = "form-control form-control-user", @placeholder = "Nhập tài khoản", @autofocus = "autofocus",@value="Admin" })
                                             @Html.ValidationMessageFor(model => model.User, "", new { @class = "text-danger" })
                                             @*<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">*@
                                         </div>
                                         <div class="form-group">
-                                            @Html.PasswordFor(model => model.Password, new { @class = "form-control form-control-user", @placeholder = "Nhập mật khẩu" })
+                                            @Html.PasswordFor(model => model.Password, new { @class = "form-control form-control-user", @placeholder = "Nhập mật khẩu",@value="1" })
                                             @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                                             @*<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">*@
                                         </div>

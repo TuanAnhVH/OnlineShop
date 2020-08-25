@@ -8,5 +8,6 @@ namespace OnlineShop.Common
     public static class CommonConstant
     {
         public static string User_Session = "User_Session";
+        public static String CartSession = "CartSession";
     }
 }

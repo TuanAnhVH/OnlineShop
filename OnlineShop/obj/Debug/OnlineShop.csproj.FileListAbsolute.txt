@@ -67,3 +67,10 @@ E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\PagedList.xml
 E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\PagedList.Mvc.xml
 E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\CKFinder.dll
 E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\CKFinder.pdb
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\Common.dll
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\Common.pdb
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\BotDetect.dll
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\BotDetect.Web.Mvc.dll
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\System.Data.SQLite.dll
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\System.Data.SQLite.xml
+E:\laptrinh\csharp\asp\OnlineShop\OnlineShop\bin\System.Data.SQLite.dll.config

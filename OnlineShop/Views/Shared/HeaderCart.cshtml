@@ -1,0 +1,9 @@
+﻿@model List<OnlineShop.Models.CartItem>
+<p>
+    chào mừng bạn đến với cửa hàng! <a href="/gio-hang"><span>Giỏ hàng:</span></a><div id="dd" class="wrapper-dropdown-2">
+        @Model.Count() sản phẩm
+        <ul class="dropdown">
+            <li>bạn có sản phẩm trong giỏ hàng</li>
+        </ul>
+    </div>
+</p>

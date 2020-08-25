@@ -1,0 +1,12 @@
+﻿
+@model List<Models.FE.Menu>
+
+<div class="menu">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li><a href="@item.Link" tabindex="@item.Target">@item.Text</a></li>
+        }
+        <div class="clear"></div>
+    </ul>
+</div>

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Models.DAO;
+using OnlineShop.Common;
+using OnlineShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +13,43 @@ namespace OnlineShop.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Slides = new SlideDAO().ListAll();
+            ViewBag.NewProduct = new ProductDAO().ListNewProduct(4);
+            ViewBag.FeatureProduct = new ProductDAO().ListFeatureProduct(4);
             return View();
         }
 
-        public ActionResult About()
+        [ChildActionOnly]
+        public ActionResult MainMenu()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var model = new MenuDAO().ListByGroupID(1);
+            return PartialView(model);
         }
-
-        public ActionResult Contact()
+        [ChildActionOnly]
+        public PartialViewResult HeaderCart()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var cart = Session[CommonConstant.CartSession];
+            var list = new List<CartItem>();
+            if (cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            return PartialView(list);
         }
+        [ChildActionOnly]
+        public ActionResult TopMenu()
+        {
+            var model = new MenuDAO().ListByGroupID(2);
+            return PartialView(model);
+        }
+
+        [ChildActionOnly]
+        public ActionResult Footer()
+        {
+            var model = new FooterDAO().GetFooter();
+            return PartialView(model);
+        }
+
+
     }
 }

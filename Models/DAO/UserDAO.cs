@@ -85,6 +85,13 @@ namespace Models.DAO
             User us = Dbo.Db.User.SingleOrDefault(x => x.UserName == username);
             return us;
         }
+        public bool ChangeStatus(long id)
+        {
+            var user = Dbo.Db.User.Find(id);
+            user.Status = !user.Status;
+            Dbo.Db.SaveChanges();
+            return user.Status;
+        }
         public int Login(string user, string pass)
         {
             var res = Dbo.Db.User.SingleOrDefault(x => x.UserName == user);
@@ -102,6 +109,16 @@ namespace Models.DAO
                     return 3;
             }
 
+        }
+
+        public bool checkUserName(string userName)
+        {
+            return Dbo.Db.User.Count(x => x.UserName == userName)>0;
+        }
+
+        public bool checkEmail(string Email)
+        {
+            return Dbo.Db.User.Count(x => x.Email== Email) > 0;
         }
     }
 }

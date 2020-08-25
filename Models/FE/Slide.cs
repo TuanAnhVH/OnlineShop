@@ -32,7 +32,6 @@ namespace Models.FE
         [StringLength(50)]
         public string ModifiedBy { get; set; }
 
-        [StringLength(10)]
-        public string Status { get; set; }
+        public bool? Status { get; set; }
     }
 }

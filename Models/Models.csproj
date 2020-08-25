@@ -56,6 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\ContactDAO.cs" />
+    <Compile Include="DAO\ContentDAO.cs" />
+    <Compile Include="DAO\FooterDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\OrderDAO.cs" />
+    <Compile Include="DAO\OrderDetailDAO.cs" />
+    <Compile Include="DAO\ProductCategoryDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\SlideDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Dbo.cs" />
     <Compile Include="FE\About.cs" />
@@ -68,6 +78,8 @@
     <Compile Include="FE\Menu.cs" />
     <Compile Include="FE\MenuType.cs" />
     <Compile Include="FE\OnlineShopDbContext.cs" />
+    <Compile Include="FE\Order.cs" />
+    <Compile Include="FE\OrderDetail.cs" />
     <Compile Include="FE\Product.cs" />
     <Compile Include="FE\ProductCategory.cs" />
     <Compile Include="FE\Slide.cs" />
@@ -76,6 +88,7 @@
     <Compile Include="FE\Tag.cs" />
     <Compile Include="FE\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

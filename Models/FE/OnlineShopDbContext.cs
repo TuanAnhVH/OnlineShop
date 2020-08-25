@@ -21,6 +21,8 @@ namespace Models.FE
         public virtual DbSet<Footer> Footer { get; set; }
         public virtual DbSet<Menu> Menu { get; set; }
         public virtual DbSet<MenuType> MenuType { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetail { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductCategory> ProductCategory { get; set; }
         public virtual DbSet<Slide> Slide { get; set; }
@@ -71,6 +73,14 @@ namespace Models.FE
                 .Property(e => e.ID)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Order>()
+                .Property(e => e.ShipMobile)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<OrderDetail>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
             modelBuilder.Entity<Product>()
                 .Property(e => e.Code)
                 .IsUnicode(false);
@@ -111,10 +121,6 @@ namespace Models.FE
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Slide>()
-                .Property(e => e.Status)
-                .IsFixedLength();
-
             modelBuilder.Entity<SystemConfig>()
                 .Property(e => e.ID)
                 .IsUnicode(false);
@@ -143,5 +149,6 @@ namespace Models.FE
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
         }
+
     }
 }

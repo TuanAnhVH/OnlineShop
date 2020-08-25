@@ -9,8 +9,8 @@ E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\EntityFramework.SqlServer.xml
 E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.csproj.CopyComplete
 E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.dll
 E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.pdb
-E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.csprojAssemblyReference.cache
 E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.dll
 E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.Mvc.dll
 E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.xml
 E:\laptrinh\csharp\asp\OnlineShop\Models\bin\Debug\PagedList.Mvc.xml
+E:\laptrinh\csharp\asp\OnlineShop\Models\obj\Debug\Models.csprojAssemblyReference.cache
